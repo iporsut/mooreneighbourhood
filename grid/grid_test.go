@@ -4,17 +4,17 @@ import "testing"
 
 func TestCreateGrid(t *testing.T) {
 	_ = New([][]int{
-		[]int{0, 1, 1},
-		[]int{0, 1, 0},
-		[]int{1, 1, 0},
+		{0, 1, 1},
+		{0, 1, 0},
+		{1, 1, 0},
 	})
 }
 
 func TestGetValueOfCellInGrid(t *testing.T) {
 	g := New([][]int{
-		[]int{0, 1, 1},
-		[]int{0, 1, 0},
-		[]int{1, 1, 0},
+		{0, 1, 1},
+		{0, 1, 0},
+		{1, 1, 0},
 	})
 	v := g.Cell(1, 1)
 
@@ -25,9 +25,9 @@ func TestGetValueOfCellInGrid(t *testing.T) {
 
 func TestCountNeighbours(t *testing.T) {
 	g := New([][]int{
-		[]int{0, 1, 1},
-		[]int{0, 1, 0},
-		[]int{1, 1, 0},
+		{0, 1, 1},
+		{0, 1, 0},
+		{1, 1, 0},
 	})
 
 	c := CountNeighbours(g, 1, 1)
