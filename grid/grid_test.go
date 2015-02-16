@@ -2,20 +2,12 @@ package grid
 
 import "testing"
 
-func TestCreateGrid(t *testing.T) {
-	_ = New([][]int{
-		{0, 1, 1},
-		{0, 1, 0},
-		{1, 1, 0},
-	})
-}
-
 func TestGetValueOfCellInGrid(t *testing.T) {
-	g := New([][]int{
+	g := Grid{
 		{0, 1, 1},
 		{0, 1, 0},
 		{1, 1, 0},
-	})
+	}
 	v := g.Cell(1, 1)
 
 	if v != 1 {
@@ -24,11 +16,11 @@ func TestGetValueOfCellInGrid(t *testing.T) {
 }
 
 func TestCountNeighbours(t *testing.T) {
-	g := New([][]int{
+	g := Grid{
 		{0, 1, 1},
 		{0, 1, 0},
 		{1, 1, 0},
-	})
+	}
 
 	c := CountNeighbours(g, 1, 1)
 

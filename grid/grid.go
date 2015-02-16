@@ -2,18 +2,12 @@ package grid
 
 type Grid [][]int
 
-func New(g [][]int) Grid {
-	return Grid(g)
-}
-
 func (g Grid) RowLen() int {
-	gn := [][]int(g)
-	return len(gn)
+	return len(g)
 }
 
 func (g Grid) ColLen() int {
-	gn := [][]int(g)
-	return len(gn[0])
+	return len(g[0])
 }
 
 func (g Grid) Cell(x, y int) int {
@@ -21,8 +15,7 @@ func (g Grid) Cell(x, y int) int {
 		return 0
 	}
 
-	gn := [][]int(g)
-	return gn[x][y]
+	return g[x][y]
 }
 
 func CountNeighbours(g Grid, x, y int) int {
