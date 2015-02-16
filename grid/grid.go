@@ -28,5 +28,8 @@ func CountNeighbours(g Grid, x, y int) int {
 	westNeghbour := g.Cell(x, y-1)
 	northWestNeghbour := g.Cell(x-1, y-1)
 
-	return northNeghbour + northEastNeghbour + eastNeghbour + southEastNeghbour + southNeghbour + southWestNeghbour + westNeghbour + northWestNeghbour
+	return northNeghbour + northEastNeghbour +
+		eastNeghbour + southEastNeghbour +
+		southNeghbour + southWestNeghbour +
+		westNeghbour + northWestNeghbour
 }
